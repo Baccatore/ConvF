@@ -1,0 +1,34 @@
+<resources>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">数独</string>
+    <string name="main_title">数独</string>
+    <string name="continue_label">コンティニュー</string>
+    <string name="new_game_label">新規</string>
+    <string name="about_label">About</string>
+    <string name="exit_label">やめる</string>
+    <string name="about_text">\
+        数独は論理に基づいて数字を配置するパズルです。
+        9x9のマス目の一部に数字が書かれた盤面からスタートし、
+        格行革列と個々の3x3ブロックに1から9までの数字が
+        1つずつ含まれるように数字を並べるのがゴールです。
+    </string>
+    <string name="about_title">アバウト</string>
+
+    <string name="settings_label">Settings...</string>
+    <string name="settings_title">設定画面</string>
+    <string name="settings_shortcut">s</string>
+    <string name="music_title">Music</string>
+    <string name="music_summary">Play background music</string>
+    <string name="hints_title">Hints</string>
+    <string name="hints_summary">Show hints during play</string>
+
+    <string name="new_game_title">Difficulty</string>
+    <string name="easy_label">Easy</string>
+    <string name="medium_label">Medium</string>
+    <string name="hard_label">Hard</string>
+
+    <string name="game_title">Game</string>
+    <string name="no_moves_lable">動きなし？</string>
+    <string name="keypad_title">KeyPad</string>
+</resources>
