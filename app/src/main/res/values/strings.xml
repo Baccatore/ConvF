@@ -29,6 +29,6 @@
     <string name="hard_label">Hard</string>
 
     <string name="game_title">Game</string>
-    <string name="no_moves_lable">動きなし？</string>
+    <string name="no_moves_label">動きなし？</string>
     <string name="keypad_title">KeyPad</string>
 </resources>

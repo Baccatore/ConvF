@@ -9,5 +9,5 @@
     <color name="puzzle_hint_0">#64ff0000</color>
     <color name="puzzle_hint_1">#6400ff80</color>
     <color name="puzzle_hint_2">#2000ff80</color>
-    <color name="puzzle_hint_selected">#64ff8000</color>
+    <color name="puzzle_selected">#64ff8000</color>
 </resources>

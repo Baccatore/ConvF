@@ -48,7 +48,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-        //getMenuInflater() XMLからメニュー定義の呼び出し、返り値にMenuInflater
+        //getMenuInflater:XMLからメニュー定義の呼び出し、返り値にMenuInflater
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
