@@ -4,6 +4,7 @@ import android.view.KeyEvent;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 
 /**
@@ -12,11 +13,9 @@ import android.view.View;
 public class Keypad extends Dialog {
     protected static final String TAG = "数独";
     private final View keys[] = new View[9];
-
-    private View keypad;
-
     private final int useds[];
     private final PuzzleView puzzleView;
+    private View keypad;
 
     public Keypad(Context context, int useds[], PuzzleView puzzleView) {
         super(context);
@@ -35,6 +34,7 @@ public class Keypad extends Dialog {
             if (element != 0) {
                 keys[element - 1].setVisibility(View.INVISIBLE);
             }
+            setListeners();
         }
     }
 
@@ -51,7 +51,7 @@ public class Keypad extends Dialog {
         keys[8] = findViewById(R.id.keypad_9);
     }
 
-    private void setListener() {
+    private void setListeners() {
         for (int i = 0; i < keys.length; i++) {
             final int t = i + 1;
             keys[i].setOnClickListener(new View.OnClickListener() {
@@ -125,5 +125,4 @@ public class Keypad extends Dialog {
         puzzleView.setSelectedTile(tile);
         dismiss(); //キーパッドのクローズ
     }
-
 }
