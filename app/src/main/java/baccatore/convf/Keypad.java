@@ -34,8 +34,8 @@ public class Keypad extends Dialog {
             if (element != 0) {
                 keys[element - 1].setVisibility(View.INVISIBLE);
             }
-            setListeners();
         }
+        setListeners();
     }
 
     private void findViews() {

@@ -12,10 +12,13 @@ import android.widget.Toast;
  */
 public class Game extends Activity {
     public static final String KEY_DIFFICULTY = "org.example.convf.difficulty";
-    public static final int DIFFICULTY_EASY = 0;
-    public static final int DIFFICULTY_MEDIUM = 1;
-    public static final int DIFFICULTY_HARD = 2;
+    public static final int DIFFICULTY_BLANK = 0;
+    public static final int DIFFICULTY_EASY = 1;
+    public static final int DIFFICULTY_MEDIUM = 2;
+    public static final int DIFFICULTY_HARD = 3;
     private static final String TAG = "数独";
+    private final String blankPuzzle =
+            "000000000000000000000000000000000000000000000000000000000000000000000000000000000";
     private final String easyPuzzle =
             "360000000004230800000004200070460003820000014500013020001900000007048300000000045";
     private final String midiumPuzzle =
@@ -111,7 +114,7 @@ public class Game extends Activity {
         //ブロックのチェック
         int startx = (x / 3) * 3;
         int starty = (y / 3) * 3;
-        for (int i = startx; i > startx + 3; i++) {
+        for (int i = startx; i < startx + 3; i++) {
             for (int j = starty; j < starty + 3; j++) {
                 if (i == x && j == y) continue; //チェック中のマスは飛ばす
                 int t = getTile(i, j);
@@ -134,6 +137,9 @@ public class Game extends Activity {
         String puz;
         //前回の保存データには触れていない
         switch (diff) {
+            case DIFFICULTY_BLANK:
+                puz = blankPuzzle;
+                break;
             case DIFFICULTY_EASY:
                 puz = easyPuzzle;
                 break;

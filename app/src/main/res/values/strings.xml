@@ -24,9 +24,11 @@
     <string name="hints_summary">Show hints during play</string>
 
     <string name="new_game_title">Difficulty</string>
+    <string name="blank_label">Blank</string>
     <string name="easy_label">Easy</string>
     <string name="medium_label">Medium</string>
     <string name="hard_label">Hard</string>
+
 
     <string name="game_title">Game</string>
     <string name="no_moves_label">動きなし？</string>

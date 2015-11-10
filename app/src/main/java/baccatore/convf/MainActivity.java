@@ -14,6 +14,8 @@ import android.view.View;
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
+    private static final String TAG = "数独";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,14 +66,14 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         return false;
     }
 
-    private static final String TAG = "数独";
-
     private void openNewGameDialog() {
         new AlertDialog.Builder(this)
                 .setTitle(R.string.new_game_title)
                 .setItems(R.array.difficulty, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialoginterface, int i) {
                         startGame(i);
+                        //ここで配列を渡しており、降順にインクリメントされたiの値が渡される。
+                        //KEYの数値は0から順番につけること。
                     }
                 }).show();
     }
